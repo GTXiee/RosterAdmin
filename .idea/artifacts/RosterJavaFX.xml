@@ -1,0 +1,22 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="RosterJavaFX">
+    <output-path>$PROJECT_DIR$/out/artifacts/RosterJavaFX</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="main.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="Roster Admin" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="Roster.jar">
+        <element id="module-output" name="Roster" />
+      </element>
+      <element id="extracted-dir" path="$PROJECT_DIR$/../TestDB/sqlite-jdbc-3.18.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../sources/jdom-2.0.6.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

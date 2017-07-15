@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<GridPane fx:id="mainGridPane" xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controllers.NewTeamController"
+          prefHeight="250.0" prefWidth="300.0" hgap="5" vgap="10"
+          stylesheets="@/css/main.css" alignment="CENTER">
+
+    <children>
+        <Label text="Team Name:" GridPane.rowIndex="1"/>
+        <TextField fx:id="teamNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+        <Label text="Roster:" GridPane.rowIndex="2"/>
+        <ComboBox fx:id="rosterComboBox" prefWidth="150.0" promptText="..." GridPane.columnIndex="1"
+                  GridPane.rowIndex="2"/>
+        <Label text="Start Week:" GridPane.rowIndex="3"/>
+        <Spinner fx:id="spinner" initialValue="1" max="1" min="1" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+        <Button fx:id="newRosterButton" mnemonicParsing="false" onAction="#showNewRosterDialog"
+                GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Button fx:id="submitButton" mnemonicParsing="false" text="Submit" GridPane.columnSpan="2147483647"
+                GridPane.halignment="CENTER" GridPane.rowIndex="5" onAction="#handleSubmit"/>
+    </children>
+</GridPane>

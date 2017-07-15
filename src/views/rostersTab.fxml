@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<BorderPane fx:id="mainBorderPane" stylesheets="@../css/main.css" xmlns="http://javafx.com/javafx/8.0.112"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.RostersTabController">
+
+    <left>
+        <VBox alignment="CENTER" spacing="5">
+            <Label alignment="CENTER" contentDisplay="CENTER" style="-fx-font-weight: bold;" text="Rosters">
+                <VBox.margin>
+                    <Insets top="5.0"/>
+                </VBox.margin>
+            </Label>
+            <ListView fx:id="rosterListView" prefWidth="143" VBox.vgrow="ALWAYS"/>
+            <Button onAction="#showNewRosterDialog" text="New Roster">
+                <VBox.margin>
+                    <Insets bottom="5.0"/>
+                </VBox.margin>
+            </Button>
+        </VBox>
+
+    </left>
+
+    <center>
+        <VBox>
+            <TableView fx:id="rosterTableView" VBox.vgrow="ALWAYS">
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+                <columns>
+
+                    <TableColumn sortable="false" text="Week #">
+                        <cellValueFactory>
+                            <PropertyValueFactory property="number"/>
+                        </cellValueFactory>
+                    </TableColumn>
+                    <TableColumn sortable="false" text="Hours">
+                        <columns>
+                            <TableColumn sortable="false" text="Rostered">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="rosteredHours"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn sortable="false" text="Saturdays">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="saturdayHours"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                            <TableColumn sortable="false" text="Sundays">
+                                <cellValueFactory>
+                                    <PropertyValueFactory property="sundayHours"/>
+                                </cellValueFactory>
+                            </TableColumn>
+                        </columns>
+                    </TableColumn>
+
+                </columns>
+            </TableView>
+        </VBox>
+    </center>
+
+    <right>
+        <VBox prefHeight="400.0" prefWidth="111.0" spacing="5">
+            <VBox alignment="CENTER" spacing="5">
+                <Button fx:id="editRosterButton" onAction="#editRoster" prefHeight="60.0" prefWidth="60.0"/>
+                <Button fx:id="deleteRosterButton" onAction="#deleteRoster" prefHeight="60.0" prefWidth="60.0"/>
+                <VBox.margin>
+                    <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                </VBox.margin>
+            </VBox>
+        </VBox>
+    </right>
+
+
+</BorderPane>

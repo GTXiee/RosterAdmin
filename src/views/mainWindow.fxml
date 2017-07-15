@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controllers.MainWindowController"
+            stylesheets="@/css/main.css"
+            prefHeight="400.0" prefWidth="700.0">
+
+    <top>
+        <MenuBar>
+            <menus>
+                <Menu text="Help">
+                    <MenuItem text="Manual" onAction="#showManual"/>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <TabPane fx:id="mainTabPane">
+            <tabs>
+                <Tab fx:id="welcomeTab" text="Welcome">
+                    <fx:include source="welcomeTab.fxml" fx:id="welcomeTabPage" alignment="CENTER"/>
+                </Tab>
+                <Tab fx:id="teamTab" text="Teams" closable="false">
+                    <fx:include source="teamListTab.fxml" fx:id="teamTabPage"/>
+                </Tab>
+                <Tab fx:id="rostersTab" text="Rosters" closable="false">
+                    <fx:include source="rostersTab.fxml" fx:id="mainWindowPage"/>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="mainGridPane" hgap="5.0" stylesheets="@../css/main.css" vgap="15.0"
+          xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controllers.WelcomeTabController">
+    <Label fx:id="gettingStartedLabel" alignment="CENTER" contentDisplay="CENTER" text="Getting Started"
+           textAlignment="CENTER"
+           GridPane.columnSpan="2147483647" GridPane.halignment="CENTER">
+        <GridPane.margin>
+            <Insets bottom="20.0"/>
+        </GridPane.margin>
+    </Label>
+    <Label text="Team Name:" GridPane.rowIndex="1"/>
+    <TextField fx:id="teamNameTextField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    <Label text="Roster:" GridPane.rowIndex="2"/>
+    <ComboBox fx:id="rosterComboBox" prefWidth="150.0" promptText="..." GridPane.columnIndex="1"
+              GridPane.rowIndex="2"/>
+    <Label text="Start Week:" GridPane.rowIndex="3"/>
+    <Spinner fx:id="spinner" initialValue="1" max="1" min="1" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+    <Button id="newRosterButton" fx:id="newRosterButton" mnemonicParsing="false" onAction="#showNewRosterDialog"
+            GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+    <Button fx:id="submitButton" mnemonicParsing="false" text="Submit" GridPane.columnSpan="2147483647"
+            GridPane.halignment="CENTER" GridPane.rowIndex="5" onAction="#handleSubmit"/>
+</GridPane>

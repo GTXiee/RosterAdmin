@@ -1,0 +1,57 @@
+#gettingStartedLabel {
+    -fx-font-size: 32px;
+}
+
+#openTeam {
+    -fx-graphic: url("/images/folder-6-50.png");
+}
+
+#editTeam, #editEmployeeButton, #editRosterButton {
+    -fx-graphic: url("/images/edit-1.png");
+}
+
+#deleteTeam, #deleteEmployeeButton, #deleteRosterButton {
+    -fx-graphic: url("/images/trash.png")
+}
+
+#saveEmployeeButton {
+    -fx-graphic: url("/images/save.png");
+}
+
+#teamTabCenter {
+    -fx-background-color: white;
+    -fx-border-style: solid;
+    -fx-border-color: #C8C8C8;
+}
+
+.label {
+    -fx-font-family: sans-serif;
+}
+
+#titleLabel {
+    -fx-font-family: sans-serif;
+    -fx-font-size: 28px;
+    -fx-text-fill: black;
+    -fx-background-color: #E9E9E9;
+}
+
+.table-column {
+    -fx-alignment: CENTER;
+}
+
+#newRosterButton {
+    -fx-graphic: url("/images/plus-sign-21px.png");
+    -fx-padding: 2;
+}
+
+#welcomeTab, #rostersTab, #teamTab {
+    -fx-font-weight: bold;
+}
+
+#teamNameLabel, #rosterNameLabel, #startWeekLabel {
+    -fx-font-weight: bold;
+}
+
+#savedLabel {
+    -fx-text-fill: green;
+}

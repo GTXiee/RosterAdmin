@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane fx:id="mainGridPane" alignment="CENTER" hgap="5.0" prefHeight="300.0" prefWidth="400.0" vgap="5.0"
+          xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="controllers.TeamEmployeesController">
+    <Label text="Employee Name:"/>
+    <TextField fx:id="employeeNameTextField" GridPane.columnIndex="1"/>
+
+    <Label text="Full/Part Time:" GridPane.rowIndex="1"/>
+    <RadioButton fx:id="partTimeRadioButton" mnemonicParsing="false" text="Part Time" GridPane.columnIndex="1"
+                 GridPane.halignment="CENTER" GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets bottom="5.0"/>
+        </GridPane.margin>
+    </RadioButton>
+    <RadioButton fx:id="fullTimeRadioButton" mnemonicParsing="false" text="Full Time" GridPane.halignment="CENTER"
+                 GridPane.rowIndex="2">
+        <GridPane.margin>
+            <Insets bottom="5.0"/>
+        </GridPane.margin>
+    </RadioButton>
+
+    <Label text="Total Hours:" GridPane.rowIndex="3"/>
+    <TextField fx:id="totalHoursTextField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Saturday Hours:" GridPane.rowIndex="4"/>
+    <TextField fx:id="saturdayHoursTextField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Sunday Hours:" GridPane.rowIndex="5"/>
+    <TextField fx:id="sundayHoursTextField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+
+    <Label text="Public Holiday Hours:" GridPane.rowIndex="6"/>
+    <TextField fx:id="publicHoursTextField" GridPane.columnIndex="1" GridPane.rowIndex="6"/>
+
+    <Label text="Public Holiday Credit:" GridPane.rowIndex="7"/>
+    <TextField fx:id="publicHolidayCreditTextField" GridPane.columnIndex="1" GridPane.rowIndex="7"/>
+
+    <Label text="Shift Changes:" GridPane.rowIndex="8"/>
+    <TextField fx:id="shiftChangesTextField" GridPane.columnIndex="1" GridPane.rowIndex="8"/>
+
+    <Button fx:id="submitButton" onAction="#handleSubmit" text="Submit" GridPane.columnSpan="2"
+            GridPane.halignment="CENTER" GridPane.rowIndex="9">
+        <GridPane.margin>
+            <Insets top="5.0"/>
+        </GridPane.margin>
+    </Button>
+
+
+</GridPane>
