@@ -77,15 +77,15 @@
             </VBox>
             <VBox alignment="CENTER" spacing="7.0">
                 <VBox alignment="CENTER" spacing="5.0">
-                    <Label text="Team Name"/>
+                    <Label fx:id="teamNameLabel" text="Team Name"/>
                     <Label fx:id="teamNameLabelD"/>
                 </VBox>
                 <VBox alignment="CENTER" spacing="5.0">
-                    <Label text="Roster"/>
+                    <Label fx:id="rosterNameLabel" text="Roster"/>
                     <Label fx:id="rosterNameLabelD"/>
                 </VBox>
                 <VBox alignment="CENTER" spacing="5.0">
-                    <Label text="Start Week"/>
+                    <Label fx:id="startWeekLabel" text="Start Week"/>
                     <Label fx:id="startWeekLabelD"/>
                 </VBox>
                 <VBox.margin>

@@ -175,6 +175,9 @@ public class NewRosterController {
     // check for a gap between week number and warns user if exists
     public boolean isWeekGap() {
         int i = 1;
+        if (weekObservableList.isEmpty()) {
+            return true;
+        }
         for (Week week : sortedWeeks) {
             if (week.getNumber() != i) {
                 weekGapLabel.setText("Week " + i + " is missing");
